@@ -35,26 +35,27 @@ EfficientCLIP-GAN is a small, rapid and efficient generative model which can gen
 ## Installation
 
 Clone this repo.
-git clone https://github.com/VinayHajare/EfficientCLIP-GAN
+```
+git clone https://github.com/harshaadeshmukh/EfficientCLIP-GAN
 pip install -r requirements.txt
-
+```
 Install [CLIP](https://github.com/openai/CLIP)
 
 
 ## Preparation
 ### Datasets
-1. Download the preprocessed metadata for [birds](https://drive.google.com/file/d/1HG7M80UNo37xOxJlhY3d_uO-pXj6GRo_/view?usp=sharing)  and extract them to data/
-2. Download the [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) image data. Extract them to data/birds/
+1. Download the preprocessed metadata for [birds](https://drive.google.com/file/d/1HG7M80UNo37xOxJlhY3d_uO-pXj6GRo_/view?usp=sharing)  and extract them to `data/`
+2. Download the [birds](https://www.vision.caltech.edu/datasets/cub_200_2011/) image data. Extract them to `data/birds/`
 
   ***OR***
-1. Download the preprocessed metadata and CUB dataset in a single zip [download](https://drive.google.com/drive/folders/1DLIf_iMvq_qLRn8881WH6KXKHlS_KH5V?usp=sharing) it and extract to data/
+1. Download the preprocessed metadata and CUB dataset in a single zip [download](https://drive.google.com/drive/folders/1DLIf_iMvq_qLRn8881WH6KXKHlS_KH5V?usp=sharing) it and extract to `data/`
 
 ## Training
-  
-cd EfficientCLIP-GAN/code/
-
+  ```
+  cd EfficientCLIP-GAN/code/
+  ```
 ### Train the EfficientCLIP-GAN model
-  - For bird dataset: bash scripts/train.sh ./cfg/bird.yml
+  - For bird dataset: `bash scripts/train.sh ./cfg/bird.yml`
 
 ### Resume training process
 If your training process is interrupted unexpectedly, set **state_epoch**, **log_dir**, and **pretrained_model_path** in train.sh with appropriate values to resume training.
@@ -62,21 +63,21 @@ If your training process is interrupted unexpectedly, set **state_epoch**, **log
 ### TensorBoard
 Our code supports automate FID evaluation during training, the results are stored in TensorBoard files under ./logs. You can change the test interval by changing **test_interval** in the YAML file.
 
-  - For bird dataset: tensorboard --logdir=./code/logs/bird/train --port 8166
+  - For bird dataset: `tensorboard --logdir=./code/logs/bird/train --port 8166`
 
 
 ## Evaluation
 
 ### Download Pretrained Model
-- [EfficientCLIP-GAN for Birds](https://huggingface.co/VinayHajare/EfficientCLIP-GAN). Download and save it to ./code/saved_models/pretrained/
+- [EfficientCLIP-GAN for Birds](https://huggingface.co/VinayHajare/EfficientCLIP-GAN). Download and save it to `./code/saved_models/pretrained/`
 
 ### Evaluate EfficientCLIP-GAN model
 
-  
-cd EfficientCLIP-GAN/code/
-
+  ```
+  cd EfficientCLIP-GAN/code/
+  ```
 set **pretrained_model** in test.sh to models path
-- For bird dataset: bash scripts/test.sh ./cfg/bird.yml
+- For bird dataset: `bash scripts/test.sh ./cfg/bird.yml`
 
 
 ### Performance
@@ -91,12 +92,14 @@ The released model achieves better performance than the Latent Diffusion.
 ## Try Now  
 The gradio demo is available as a hosted HuggingFace Space [here](https://huggingface.co/spaces/VinayHajare/Text-To-Image-EfficientCLIP-GAN).  
 You can run this app locally  
+```
 cd EfficientCLIP-GAN/gradio app
 pip install -r requirements.txt
-
+```
 then 
+```
 python app.py
-
+```
 
 
 ## Note :  
@@ -114,4 +117,4 @@ python app.py
 
 If you find this useful in your research, please consider giving a star to repository
 
-The code is released for academic research use only. For commercial use, please contact [Harshad Deshmukh](https://harshaadeshmukh.github.io/Portfolio/).  
+The code is released for academic research use only. For commercial use, please contact [Harshad Deshmukh]([https://vinayhajare.engineer](https://harshaadeshmukh.github.io/Portfolio/)).  
