@@ -1,0 +1,8 @@
+gradio
+requests
+pillow
+numpy
+huggingface-hub
+torch==1.11.0
+torchvision
+git+https://github.com/openai/CLIP.git

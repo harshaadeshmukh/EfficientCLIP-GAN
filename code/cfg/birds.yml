@@ -1,0 +1,86 @@
+# Configuration name
+CONFIG_NAME: 'bird'
+
+# Name of the dataset
+dataset_name: 'birds'
+
+# Directory containing dataset
+data_dir: '../data/birds'
+
+# Image size
+imsize: 256
+
+# Dimensionality of the noise vector
+z_dim: 100
+
+# Dimensionality of the conditioning vector (size of CLIP embeddings)
+cond_dim: 512
+
+# Manual seed for reproducibility
+manual_seed: 100
+
+# Whether to use CUDA for GPU acceleration
+cuda: True
+
+# CLIP configuration for evaluation
+clip4evl: {'src':"clip", 'type':'ViT-B/32'}
+
+# CLIP configuration for training
+clip4trn: {'src':"clip", 'type':'ViT-B/32'}
+
+# CLIP configuration for text embedding
+clip4text: {'src':"clip", 'type':'ViT-B/32'}
+
+# Training stamp
+stamp: 'normal'
+
+# Starting epoch
+state_epoch: 0
+
+# Maximum number of epochs
+max_epoch: 1502
+
+# Batch size
+batch_size: 32
+
+# GPU ID
+gpu_id: 0
+
+# Number of filters
+nf: 64
+
+# Number of channels
+ch_size: 3
+
+# Minimum scaler value to used if the mixed-precision is used and to make the model weights smaller
+scaler_min: 64
+
+# Growth interval, frequency at which the training process are modified or scaled up
+growth_interval: 2000
+
+# Learning rate for the generator
+lr_g: 0.0001
+
+# Learning rate for the discriminator
+lr_d: 0.0004
+
+# controls the influence of the similarity between text and image embeddings during training process
+sim_w: 4.0
+
+# Interval for generating samples
+gen_interval: 10
+
+# Interval for testing the model
+test_interval: 10
+
+# Interval for saving checkpoints
+save_interval: 10
+
+# Number of times to sample during training to check model performance visually
+sample_times: 12
+
+# Path to NPZ file containing validation data
+npz_path: '../data/birds/npz/bird_val256_FIDK0.npz'
+
+# Directory for logging training progress
+log_dir: 'new'

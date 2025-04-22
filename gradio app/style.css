@@ -1,0 +1,78 @@
+/* General Container Style */
+.gradio-container{
+    font-family: 'IBM Plex Sans', sans-serif;
+    max-width: 730px !important;
+    margin: auto;
+    padding-top: 1.5 rem;
+    text-align: center;
+}
+/* Button Styles */
+.gr-button {
+    color: white;
+    background: #007bff; /* Use a primary color for the background */
+    white-space: nowrap;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.gr-button:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+}
+/* Share Button Styles */
+#share-btn-container {
+    padding: 0.5rem !important;
+    background-color: #007bff; /* Use a primary color for the background */
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px !important;
+    max-width: 13rem;
+    margin: 0 auto; /* Center the container horizontally */
+    transition: background-color 0.3s;
+}
+#share-btn-container:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+}
+#share-btn {
+    all: initial;
+    color: white; /* Change to white */
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0.5rem !important;
+    padding: 0.5rem !important;
+}
+/* Other Styles */
+#gallery {
+    min-height: 22rem;
+    margin: auto; /* Center the gallery horizontally */
+    border-bottom-right-radius: 0.5rem !important;
+    border-bottom-left-radius: 0.5rem !important;
+}
+/* Centered Container for the Image */
+.image-container {
+    max-width: 100%; /* Set the maximum width for the container */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for spacing */
+    border: 1px solid #ccc; /* Add a subtle border to the container */
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflow if the image is larger */
+    max-height: 22rem; /* Set a maximum height for the container */
+}
+/* Set a fixed size for the image */
+.image-container img {
+    max-width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Set a maximum height for the image */
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Change the color of the red text to yellow */
+#content_align > span[style="color:darkred;font-size:32px;font-weight:bold"] {
+    color: yellow !important;
+}
+/* Change the color of the blue text to white */
+#content_align > span[style="color:blue;font-size:16px;font-weight:bold"] {
+    color: white !important;
+}
