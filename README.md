@@ -115,6 +115,3 @@ python app.py
 If you find this useful in your research, please consider giving a star to repository
 
 The code is released for academic research use only. For commercial use, please contact [Harshad Deshmukh](https://harshaadeshmukh.github.io/Portfolio/).  
-
-### Contributors
-[![Contributors Display](https://badges.pufler.dev/contributors/VinayHajare/EfficientCLIP-GAN?size=50&padding=5&perRow=10&bots=false)]()
